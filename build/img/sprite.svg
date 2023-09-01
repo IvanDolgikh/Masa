@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs>
+<clipPath id="clip0_1634_2586">
+<rect width="10" height="10" fill="white"/>
+</clipPath>
+</defs><symbol id="icon-angle" viewBox="0 0 20 20">
+<path d="M20 20C8.95431 20 0 11.0457 0 0V20H20Z"/>
+</symbol><symbol id="icon-close-menu" viewBox="0 0 20 20"><g fill="none">
+<path d="M2 18L10 10M10 10L18 2M10 10L18 18M10 10L2 2" stroke="#316DC2" stroke-linecap="round" stroke-linejoin="round"/>
+</g></symbol><symbol id="icon-close" viewBox="0 0 20 20"><g fill="none"><path d="M.293 18.291a1 1 0 101.414 1.414L10 11.413l8.292 8.292a1 1 0 101.414-1.414l-8.292-8.292 8.292-8.292A1 1 0 1018.291.293L9.999 8.585 1.707.293A1 1 0 10.293 1.707L8.585 10 .293 18.291z"/></g></symbol><symbol id="icon-decorative-info-project" viewBox="0 0 42 42"><g fill="none">
+<rect width="42" height="42" rx="21" fill="#316DC2"/>
+<path d="M21 10L24.0138 15.4748L30 15.5L27.0275 21L30 26.5L24.0138 26.5252L21 32L17.9862 26.5252L12 26.5L14.9725 21L12 15.5L17.9862 15.4748L21 10Z" fill="white"/>
+</g></symbol><symbol id="icon-next-slide" viewBox="0 0 11 12"><g fill="none">
+<path d="M0 5.6875H10M10 5.6875L5.03311 11M10 5.6875L5.03311 1" stroke="#316DC2"/>
+</g></symbol><symbol id="icon-open-accordion" viewBox="0 0 18 18"><g fill="none">
+<path d="M9 0V9M9 9V18M9 9H0M9 9H18" stroke="white"/>
+</g></symbol><symbol id="icon-open-menu" viewBox="0 0 20 20"><g fill="none">
+<path d="M1 6H19M1 10H19M1 14H19" stroke="white" stroke-linecap="round"/>
+</g></symbol><symbol id="icon-open-sublist" viewBox="0 0 12 12"><g fill="none">
+<path opacity="0.6" d="M11.454 3.81812L5.99947 8.72721L0.544922 3.81812" stroke="white"/>
+</g></symbol><symbol id="icon-prev-slide" viewBox="0 0 11 12"><g fill="none">
+<path d="M11 5.6875H1M1 5.6875L5.96689 11M1 5.6875L5.96689 1" stroke="#316DC2"/>
+</g></symbol><symbol id="icon-show-more" viewBox="0 0 10 10"><g fill="none">
+<g clip-path="url(#clip0_1634_2586)">
+<path d="M1 9L9 1M9 1H1.05298M9 1V8.94702" stroke="white"/>
+</g>
+
+</g></symbol></svg>

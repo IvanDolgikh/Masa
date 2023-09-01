@@ -2,8 +2,7 @@
 // ---------------------------------
 
 @import "vendor/normalize";
-// Swiper 7.4.1
-// @import "vendor/swiper";
+@import "vendor/swiper";
 
 // Global
 // ---------------------------------
@@ -13,7 +12,6 @@
 @import "global/fonts";
 @import "global/reboot";
 @import "global/utils";
-@import "global/container";
 
 // Blocks
 // ---------------------------------
@@ -23,6 +21,23 @@
 @import "blocks/custom-input";
 @import "blocks/custom-toggle";
 @import "blocks/custom-select";
+@import "blocks/main-header";
+@import "blocks/nav";
+@import "blocks/hero";
+@import "swiper/swiper-pagination";
+@import "swiper/swiper-scrollbar";
+@import "swiper/swiper-buttons";
+@import "blocks/project";
+@import "blocks/programs";
+@import "blocks/training";
+@import "blocks/news";
+@import "blocks/questions";
+
+// Accordion
+// ---------------------------------
+
+@import "accordion/accordion";
+@import "accordion/data-accordion";
 
 // ---------------------------------
 

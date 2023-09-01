@@ -1,8 +1,35 @@
 @font-face {
-  font-style: normal;
+  font-family: "rouble";
+  src: url("../fonts/rouble/rouble.woff2") format("woff2"),
+    url("../fonts/rouble/rouble.woff") format("woff");
   font-weight: 400;
-  font-family: "";
-
+  font-style: normal;
   font-display: swap;
-  src: url("../fonts/.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Manrope";
+  src: url("../fonts/manrope-light/Manrope-Light.woff2") format("woff2"),
+    url("../fonts/manrope-light/Manrope-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Manrope";
+  src: url("../fonts/manrope-regular/Manrope-Regular.woff2") format("woff2"),
+    url("../fonts/manrope-regular/Manrope-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Manrope";
+  src: url("../fonts/manrope-medium/Manrope-Medium.woff2") format("woff2"),
+    url("../fonts/manrope-medium/Manrope-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
 }

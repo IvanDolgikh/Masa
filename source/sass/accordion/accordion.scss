@@ -1,0 +1,185 @@
+.accordion {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  & & {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  &__element:last-child {
+    margin-bottom: 120px;
+
+    @include vp-1199 {
+      margin-bottom: 100px;
+    }
+
+    @include vp-767 {
+      margin-bottom: 70px;
+    }
+  }
+
+  &__element {
+    margin: 0;
+    padding: 40px 40px 29px 40px;
+    border: 1px solid $color-secondary;
+    border-radius: 16px;
+
+    @include vp-1199 {
+      padding: 30px 29px 28px 29px;
+    }
+
+    @include vp-767 {
+      padding: 21px 0 18px 0;
+    }
+  }
+
+  &__element.is-active {
+    background-color: $color-secondary;
+    padding-bottom: 30px;
+
+    @include vp-1199 {
+      padding-bottom: 27px;
+    }
+  }
+
+  &__element.is-active .accordion__wrapper p{
+    color: $color-secondary-beige;
+  }
+
+  &__element.is-active .accordion__button-container span{
+    color: $color-secondary-beige;
+  }
+
+  &__element.is-active &__button {
+    background-color: $color-default-white;
+  }
+
+  &__element.is-active &__button::after {
+    content: "";
+    width: 18px;
+    height: 1px;
+    background-color: $color-secondary;
+  }
+
+  &__button {
+    background-color: $color-secondary;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    margin-left: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+    // &:hover,
+    // &:focus-visible {
+    //   background-color: $color-dark-blue;
+    //   outline: none;
+    // }
+
+    &:disabled {
+      opacity: 0.3;
+    }
+
+    @include vp-767 {
+      width: 32px;
+      height: 32px;
+      min-width: 32px;
+    }
+  }
+
+  &__wrapper {
+    padding: 0;
+  }
+}
+
+.accordion__element.is-active .accordion__close-button-icon {
+  display: none;
+}
+
+.accordion__close-button-icon {
+  stroke: $color-default-white;
+}
+
+.accordion__button:hover .accordion__close-button-icon,
+.accordion__button:focus-visible .accordion__close-button-icon {
+  stroke: $color-default-white;
+  outline: none;
+}
+
+.accordion__button-container {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  width: 100%;
+  padding: 0;
+
+  // &:hover .accordion__button,
+  // &:focus-visible .accordion__button {
+  //   background-color: $color-dark-blue;
+  //   outline: none;
+  // }
+
+  &:hover .accordion__close-button-icon,
+  &:focus-visible .accordion__close-button-icon {
+    stroke: $color-default-white;
+    outline: none;
+  }
+}
+
+.accordion__button-container span:first-child {
+  width: fit-content;
+  text-align: left;
+  color: $color-secondary;
+  font-family: $ff-manrope;
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 28px;
+  margin-right: 32%;
+
+  @include vp-1199 {
+    font-size: 22px;
+    line-height: 26px;
+    margin-right: 14%;
+  }
+
+  @include vp-767 {
+    font-size: 16px;
+    line-height: 18px;
+  }
+}
+
+.accordion__wrapper p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px;
+  margin: 0;
+  padding-top: 14px;
+
+  @include vp-1199 {
+    line-height: 20px;
+  }
+
+  @include vp-767 {
+    font-size: 14px;
+  }
+}
+
+.accordion__content {
+  padding-right: 30%;
+
+  @include vp-1199 {
+    padding-right: 14%;
+  }
+
+  @include vp-767 {
+    padding-right: 0;
+  }
+}

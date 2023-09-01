@@ -1,0 +1,41 @@
+.swiper-pagination {
+  position: relative;
+  text-align: left;
+  width: fit-content;
+}
+
+.swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  border: 1px solid $color-secondary;
+  border-radius: 50%;
+  background-color: transparent;
+  opacity: 1;
+
+  @include vp-767 {
+    width: 8px;
+    height: 8px;
+  }
+}
+
+.swiper-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal,
+.swiper-pagination-custom, .swiper-pagination-fraction  {
+  width: fit-content;
+  bottom: auto;
+}
+
+.swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
+.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet:not(:last-child) {
+  margin: 0;
+  margin-right: 12px;
+}
+
+.swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
+.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet:last-child {
+  margin: 0;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: $color-secondary;
+}
