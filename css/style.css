@@ -4014,13 +4014,13 @@ button,
 }
 
 .news .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
-.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet:not(:last-child) {
+.news .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet:not(:last-child) {
   margin: 0;
   margin-right: 20px;
 }
 
 .news .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
-.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet:last-child {
+.news .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet:last-child {
   margin-right: 0;
 }
 
@@ -5463,8 +5463,10 @@ button,
   }
 
   .training__grant-item p {
+    font-size: 16px;
     line-height: 20px;
     font-size: 16px;
+    margin: 0;
   }
 
   .news__container {
@@ -6157,6 +6159,8 @@ button,
 
   .training__grant-item p {
     font-size: 14px;
+    line-height: 20px;
+    margin: 0;
   }
 
   .training__grant-item span {
@@ -6277,7 +6281,7 @@ button,
   }
 
   .news .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
-  .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet:not(:last-child) {
+  .news .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet:not(:last-child) {
     margin-right: 16px;
   }
 
