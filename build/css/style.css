@@ -4199,11 +4199,15 @@ button,
 @media (max-width: 1199px) {
   .training__grant-item p {
     line-height: 20px;
+    font-size: 16px;
+    margin: 0;
   }
 }
 @media (max-width: 767px) {
   .training__grant-item p {
     font-size: 14px;
+    line-height: 20px;
+    margin: 0;
   }
 }
 
@@ -4796,19 +4800,19 @@ button,
 }
 
 .news .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
-.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet:not(:last-child) {
+.news .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet:not(:last-child) {
   margin: 0;
   margin-right: 20px;
 }
 @media (max-width: 767px) {
   .news .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
-.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet:not(:last-child) {
+.news .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet:not(:last-child) {
     margin-right: 16px;
   }
 }
 
 .news .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
-.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet:last-child {
+.news .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet:last-child {
   margin-right: 0;
 }
 

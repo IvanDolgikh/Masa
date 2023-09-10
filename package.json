@@ -15,7 +15,8 @@
     "build": "gulp build",
     "dev": "gulp dev",
     "start": "gulp start",
-    "webp": "gulp webp"
+    "webp": "gulp webp",
+    "deploy": "npm run build && gh-pages -d build"
   },
   "editorconfig-cli": [
     "*.json",
@@ -62,6 +63,7 @@
     "node": ">=16.15.1"
   },
   "dependencies": {
+    "gh-pages": "^6.0.0",
     "swiper": "^10.2.0"
   }
 }
