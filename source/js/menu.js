@@ -1,9 +1,10 @@
+import {swiperHero} from './sliders';
+
 const button = document.querySelector('.main-header__button-open-menu');
 const openIcon = document.querySelector('.main-header__button-open-menu-icon');
 const closeIcon = document.querySelector('.main-header__button-close-menu-icon');
 const navContainer = document.querySelector('.main-header__nav-list-container');
 const nav = document.querySelector('.main-header__nav');
-// const navList = document.querySelector('.main-header__nav-list');
 const body = document.querySelector('body');
 
 const changeClasses = () => {
@@ -15,25 +16,26 @@ const changeClasses = () => {
   body.classList.toggle('nav--active');
 };
 
-const onOpenMenu = () => {
-  changeClasses();
+const runSlider = () => {
+  if (nav.classList.contains('main-header__nav--active')) {
+    swiperHero.autoplay.stop();
+  } else {
+    swiperHero.autoplay.start();
+  }
 };
 
-// const onClickLink = (evt) => {
-//   if (evt.target.closest('LI')) {
-//     changeClasses();
-//   }
-// };
+const onOpenMenu = () => {
+  changeClasses();
+  runSlider();
+};
 
 const onClickOutside = (evt) => {
   if (evt.target.className === 'nav--active') {
     changeClasses();
+    runSlider();
   }
 };
 
 
 button.addEventListener('click', onOpenMenu);
-
-// navList.addEventListener('click', onClickLink);
-
 body.addEventListener('click', onClickOutside);

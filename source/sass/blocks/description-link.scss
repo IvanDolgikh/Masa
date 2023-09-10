@@ -1,0 +1,42 @@
+.description-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  flex-shrink: 0;
+  width: 30px;
+  height: 30px;
+  background-color: $color-secondary;
+  border-radius: 50%;
+  cursor: pointer;
+
+  svg {
+    stroke: $color-default-white;
+    transition: 0.3s;
+  }
+
+  &:hover,
+  &:focus-visible {
+    outline: none;
+    background-color: $color-default-white;
+    transition: 0.3s;
+
+    svg {
+      stroke: $color-secondary;
+      transition: 0.3s;
+      transform: rotate(45deg);
+    }
+  }
+
+  &:active {
+    svg {
+      transition: 0.3s;
+      opacity: 0.7;
+    }
+  }
+}
+
+.description-link-disabled {
+  background-color: #a9afb7;
+  pointer-events: none;
+}

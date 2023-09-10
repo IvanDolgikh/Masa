@@ -20,3 +20,9 @@ trim_trailing_whitespace = true
 
 [*.md]
 trim_trailing_whitespace = false
+
+[vendor]
+exclude_patterns = vendor/**
+
+[build]
+exclude_patterns = build/**

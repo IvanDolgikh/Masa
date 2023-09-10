@@ -29,6 +29,14 @@
   object-fit: cover;
 }
 
+.training__info-container {
+  max-width: 498px;
+
+  @include vp-1199 {
+    max-width: none;
+  }
+}
+
 .training__info-container h2 {
   font-size: 50px;
   font-weight: 400;
@@ -56,14 +64,15 @@
   color: $color-default-white;
   margin: 0;
   margin-bottom: 30px;
-  max-width: 498px;
 
   @include vp-1199 {
     line-height: 20px;
     margin-bottom: 37px;
+    margin-right: 21%;
   }
 
   @include vp-767 {
+    margin-right: 0;
     font-size: 14px;
     margin-bottom: 25px;
   }
@@ -138,7 +147,6 @@
   line-height: 26px;
   color: $color-default-white;
   margin: 0;
-
 
   @include vp-1199 {
     line-height: 20px;

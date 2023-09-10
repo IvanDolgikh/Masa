@@ -1,28 +1,37 @@
 .custom-select {
   position: relative;
 
-  width: 300px;
-  padding: 14px 0 28px;
-  margin: 0 0 44px 0;
+  width: 100%;
+  height: auto;
+  margin-bottom: 18px;
 
-  @media screen and (max-width: 767px) {
-    padding: 4px 0 14px;
-    width: 100%;
+  @include vp-1199 {
+    margin-bottom: 20px;
+  }
+
+  @include vp-767 {
+    margin-bottom: 24px;
   }
 
   &__label {
-    position: absolute;
-    top: 50%;
-    left: 10px;
-
-    transform: translateY(-50%);
-
-    transition: transform 0.3s ease, opacity  0.3s ease;
-
+    display: block;
+    font-family: $ff-manrope;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+    color: rgba(240, 239, 233, 0.8);
+    margin-bottom: 12px;
     pointer-events: none;
 
-    @media screen and (max-width: 767px) {
-      transform: translateY(calc(-50% - 5px));
+    @include vp-1199 {
+      line-height: 20px;
+      margin-bottom: 5px;
+    }
+
+    @include vp-767 {
+      font-size: 12px;
+      line-height: 14px;
+      margin-bottom: 10px;
     }
   }
 
@@ -63,23 +72,21 @@
     display: flex;
     align-items: center;
     width: 100%;
-    height: 48px;
-    padding: 5px 10px;
+    height: 50px;
+    padding: 5px 20px;
 
     background-color: rgba(255, 255, 255, 0);
-    border: 2px solid rgba(0, 0, 0, 0.2);
-    border-radius: 5px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
     outline: none;
     cursor: pointer;
 
     transition: border 0.3s ease;
 
-    &:hover {
-      border: 2px solid rgba(0, 0, 0, 0.5);
-    }
-
-    &:focus {
-      border: 2px solid rgba(0, 0, 0, 0.8);
+    &:hover,
+    &:focus,
+    &:active {
+      border: 1px solid rgba(255, 255, 255, 1);
     }
 
     &:disabled {
@@ -90,19 +97,20 @@
 
   &__list {
     position: absolute;
-    bottom: 10px;
+    bottom: -4px;
     z-index: 1;
 
     width: 100%;
-    max-height: 100px;
+    max-height: 170px;
     margin: 0;
     padding: 0;
     overflow-y: auto;
 
     list-style: none;
 
-    background-color: #ffffff;
-    border: 2px solid #000000;
+    background-color: $color-default-white;
+    border: 1px solid $color-default-white;
+    border-radius: 8px;
     transform: translateY(100%);
     visibility: hidden;
     opacity: 0;
@@ -111,35 +119,46 @@
   }
 
   &__item {
-    padding: 5px;
-
+    padding: 17px 20px;
+    color: $color-primary;
+    font-family: $ff-manrope;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
     outline: none;
     cursor: pointer;
 
     transition: background-color 0.3s ease;
 
     &[aria-selected="true"] {
-      background-color: rgba(0, 0, 0, 0.2);
+      background-color: $color-secondary;
+      color: $color-default-white;
+
+      &:hover {
+        color: $color-default-white;
+      }
 
       @media (hover: hover) {
         &:hover:not(.focus-visible) {
-          background-color: rgba(0, 0, 0, 0.2);
+          color: $color-default-white;
         }
       }
 
       &.focus-visible:focus {
-        background-color: rgba(0, 0, 0, 0.2);
+        background-color: $color-secondary;
+        color: $color-default-white;
       }
     }
 
     @media (hover: hover) {
       &:hover:not(.focus-visible) {
-        background-color: rgba(0, 0, 0, 0.4);
+        color: $color-secondary;
       }
     }
 
     &.focus-visible:focus {
-      background-color: rgba(0, 0, 0, 0.4);
+      background-color: $color-secondary;
+      color: $color-default-white;
     }
   }
 
@@ -175,17 +194,14 @@
     }
   }
 
-  &__icon {
-    flex-shrink: 0;
-    width: 20px;
-    height: 10px;
+  &__icon-container {
     margin-left: auto;
-
-    background-color: #000000;
-
     transition: transform 0.3s ease;
+  }
 
-    clip-path: polygon(100% 0, 100% 20%, 50% 100%, 0 20%, 0 0, 50% 80%);
+  .custom-select__icon {
+    fill: none;
+    stroke: $color-default-white;
   }
 
   &.is-disabled {
@@ -210,26 +226,19 @@
       opacity: 1;
     }
 
-    .custom-select__icon {
+    .custom-select__icon-container {
       transform: rotate(180deg);
-    }
-
-    .custom-select__label {
-      opacity: 0;
     }
   }
 
   &.not-empty {
     .custom-select__text {
       opacity: 1;
-    }
-
-    .custom-select__label {
-      opacity: 0;
-    }
-
-    .custom-select__placeholder {
-      opacity: 0;
+      font-family: $ff-manrope;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 14px;
+      color: $color-secondary-beige;
     }
   }
 
@@ -262,14 +271,6 @@
   &--placeholder {
     .custom-select__label {
       transform: translateY(calc(-50% - 40px));
-      opacity: 1;
-    }
-
-    &.is-open .custom-select__label {
-      opacity: 1;
-    }
-
-    &.not-empty .custom-select__label {
       opacity: 1;
     }
   }

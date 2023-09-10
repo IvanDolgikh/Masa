@@ -1,58 +1,60 @@
-.custom-input,
-.custom-textarea {
+.custom-input {
   position: relative;
+  width: fit-content;
+  margin-bottom: 15px;
 
-  display: flex;
-  width: 530px;
-  padding: 14px 0 28px;
-
-  @media screen and (max-width: 767px) {
-    padding: 4px 0 48px;
+  @include vp-1199 {
+    margin-bottom: 13px;
     width: 100%;
+  }
+
+  @include vp-767 {
+    margin-bottom: 20px;
   }
 
   label {
-    display: flex;
-    align-items: center;
-    width: 100%;
+    display: block;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+    color: rgba(240, 239, 233, 0.8);
+    margin-bottom: 9px;
 
-    @media screen and (max-width: 767px) {
-      align-items: flex-start;
-      flex-direction: column;
+    @include vp-1199 {
+      line-height: 20px;
     }
 
-    input,
-    textarea {
-      flex-grow: 1;
-      max-width: 300px;
-      min-height: 48px;
-      margin-left: auto;
-      padding: 10px;
-
-      border: 2px solid rgba(#000000, 0.2);
-      border-radius: 5px;
-      outline: none;
-
-      transition: border 0.3s ease;
-
-      @media screen and (max-width: 767px) {
-        max-width: unset;
-        width: 100%;
-      }
-
-      &:hover {
-        border: 2px solid rgba(#000000, 0.5);
-      }
-
-      &:focus {
-        border: 2px solid rgba(#000000, 0.8);
-      }
+    @include vp-767 {
+      font-size: 12px;
+      line-height: 14px;
+      margin-bottom: 12px;
     }
   }
 
-  &__label {
-    @media screen and (max-width: 767px) {
-      margin: 0 0 18px 0;
+  input,
+  textarea {
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    outline: none;
+    height: 50px;
+    background-color: transparent;
+    transition: border 0.3s ease;
+    width: 350px;
+    padding: 10px 20px;
+    color: $color-default-white;
+
+    &:hover,
+    &:focus-visible {
+      border: 1px solid rgba(255, 255, 255, 1);
+    }
+
+    &:disabled {
+      border: 1px solid rgba(255, 255, 255, 0.4);
+      background: rgba(255, 255, 255, 0.2);
+    }
+
+    @include vp-1199 {
+      width: 100%;
     }
   }
 
@@ -61,51 +63,32 @@
     right: 0;
     bottom: 35px;
 
-    color: #ff1553;
+    color: $color-error;
 
     opacity: 0;
 
     transition: opacity 0.3s ease;
-
-    @media screen and (max-width: 767px) {
-      bottom: 20px;
-    }
   }
 
   &.is-invalid {
     input,
     textarea {
-      border: 2px solid #ff1553;
-
-      &:focus,
-      &:hover {
-        border: 2px solid rgba(#ff1553, 0.5);
-      }
+      border: 1px solid $color-error;
+      background: rgba(255, 94, 102, 0.2);
     }
   }
 
   &.is-valid {
     input {
-      border: 2px solid #22b259;
-
-      &:focus,
-      &:hover {
-        border: 2px solid rgba(#22b259, 0.5);
-      }
+      border: 1px solid #22b259;
     }
   }
+}
 
-  .input-message {
-    position: absolute;
-    right: 0;
-    bottom: -5px;
+.consultation__message textarea {
+  height: 98px;
 
-    &.is-invalid {
-      color: #ff0000;
-    }
-
-    &.is-valid {
-      color: #15ab07;
-    }
+  @include vp-767 {
+    height: 92px;
   }
 }

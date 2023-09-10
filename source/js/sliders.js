@@ -3,9 +3,9 @@ export const swiperHero = new Swiper('.swiper-1', {
   loop: true,
   slidesPerView: 1,
 
-  // autoplay: {
-  //   delay: 3000,
-  // },
+  autoplay: {
+    delay: 3000,
+  },
 
   pagination: {
     el: '.swiper-pagination',
@@ -32,7 +32,7 @@ export const swiperPrograms = new Swiper('.swiper-2', {
       slidesPerView: 'auto',
       spaceBetween: 30,
       scrollbar: {
-        el: '.swiper-scrollbar',
+        el: '.programs__swiper-scrollbar',
         draggable: true,
         dragSize: 324,
       },
@@ -41,7 +41,43 @@ export const swiperPrograms = new Swiper('.swiper-2', {
       slidesPerView: 3,
       spaceBetween: 32,
       scrollbar: {
-        el: '.swiper-scrollbar',
+        el: '.programs__swiper-scrollbar',
+        draggable: true,
+        dragSize: 392,
+      },
+    },
+  },
+});
+
+export const swiperFeedback = new Swiper('.swiper-4', {
+  direction: 'horizontal',
+  loop: false,
+  slidesPerView: 2,
+  spaceBetween: 32,
+
+  navigation: {
+    nextEl: '.feedback .swiper-buttons__next',
+    prevEl: '.feedback .swiper-buttons__back',
+  },
+
+  breakpoints: {
+    320: {
+      slidesPerView: 1,
+    },
+    768: {
+      slidesPerView: 'auto',
+      spaceBetween: 30,
+      scrollbar: {
+        el: '.feedback__swiper-scrollbar',
+        draggable: true,
+        dragSize: 324,
+      },
+    },
+    1200: {
+      slidesPerView: 2,
+      spaceBetween: 32,
+      scrollbar: {
+        el: '.feedback__swiper-scrollbar',
         draggable: true,
         dragSize: 392,
       },
@@ -71,11 +107,17 @@ export const swiperNews = new Swiper('.swiper-3', {
   breakpoints: {
     320: {
       slidesPerView: 1,
+      grid: {
+        rows: 2,
+        fill: 'row',
+      },
+      spaceBetween: 20,
     },
     768: {
       slidesPerView: 2,
       grid: {
         rows: 2,
+        fill: 'row',
       },
       spaceBetween: 30,
     },

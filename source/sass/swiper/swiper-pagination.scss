@@ -12,6 +12,12 @@
   background-color: transparent;
   opacity: 1;
 
+  &:hover,
+  &:focus-visible {
+    outline: none;
+    border: 1px solid $color-secondary;
+  }
+
   @include vp-767 {
     width: 8px;
     height: 8px;
@@ -20,7 +26,8 @@
 
 .swiper-horizontal > .swiper-pagination-bullets,
 .swiper-pagination-bullets.swiper-pagination-horizontal,
-.swiper-pagination-custom, .swiper-pagination-fraction  {
+.swiper-pagination-custom,
+.swiper-pagination-fraction {
   width: fit-content;
   bottom: auto;
 }

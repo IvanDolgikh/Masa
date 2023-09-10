@@ -2,10 +2,28 @@
   position: relative;
   max-width: $max-width;
   margin: 0 auto;
-  padding: 120px 100px;
+
+  padding: 120px 0;
 
   @include vp-1199 {
-    padding: 100px 45px;
+    padding: 100px 0;
+  }
+
+  @include vp-767 {
+    padding: 67px 0;
+  }
+}
+
+.news__slider-container {
+  margin: 0 auto;
+  padding: 0 100px;
+
+  @include vp-1199 {
+    padding: 0 45px;
+  }
+
+  @include vp-767 {
+    padding: 0 15px;
   }
 }
 
@@ -16,65 +34,99 @@
   color: $color-secondary;
   text-align: center;
   margin: 0;
-  margin-bottom: 48px;
+  margin-bottom: 50px;
+  max-width: $max-width;
+  padding: 0 100px;
 
   @include vp-1199 {
     font-size: 34px;
+    padding: 0 45px;
     margin-bottom: 30px;
   }
 
   @include vp-767 {
     font-size: 20px;
     line-height: 20px;
-    margin-bottom: 24px;
+    margin-bottom: 29px;
+    padding: 0 15px;
   }
+}
+
+.news__list-container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 100px;
+
+  @include vp-1199 {
+    padding: 0 45px;
+  }
+
+  @include vp-767 {
+    padding: 0 15px;
+    max-width: 100vh;
+    overflow-x: auto;
+  }
+}
+
+.news__list-container::-webkit-scrollbar {
+  width: 0;
+  height: 0;
 }
 
 .news__list {
   display: flex;
   justify-content: flex-start;
   gap: 30px;
-  margin: 0 auto;
-  width: fit-content;
   flex-wrap: wrap;
-  margin-bottom: 38px;
+  margin: 0 auto 42px auto;
+  width: fit-content;
 
   @include vp-1199 {
-    gap: 10px;
-  }
-}
-
-.news__item {
-  padding: 10px 26px;
-  opacity: 0.6;
-
-  @include vp-1199 {
-    padding: 10px 20px;
+    gap: 30px 10px;
+    margin-bottom: 31px;
   }
 
   @include vp-767 {
-    padding: 6px 14px;
+    flex-wrap: nowrap;
+    gap: 12px;
+    margin-bottom: 25px;
   }
 }
 
-.news__item--active {
-  border: 1px solid $color-secondary;
-  border-radius: 20px;
-  opacity: 1;
-}
-
 .news__item a {
+  display: block;
   font-size: 14px;
   font-weight: 500;
   line-height: 14px;
   letter-spacing: 0.28px;
   text-transform: uppercase;
   color: $color-secondary;
+  padding: 10px 26px;
+  opacity: 0.6;
+
+  &:hover,
+  &:focus-visible {
+    outline: none;
+    opacity: 1;
+  }
+
+  @include vp-1199 {
+    padding: 10px 20px;
+  }
 
   @include vp-767 {
     font-size: 12px;
     line-height: 12px;
     letter-spacing: 0.24px;
+    padding: 7px 14px;
+  }
+}
+
+.news__item--active {
+  a {
+    border: 1px solid $color-secondary;
+    border-radius: 20px;
+    opacity: 1;
   }
 }
 
@@ -84,10 +136,11 @@
 
   @include vp-1199 {
     width: auto;
+    height: 100%;
   }
 }
 
-.news .swiper-slide:first-child{
+.news .swiper-slide:first-child {
   width: 604px;
 
   @include vp-1199 {
@@ -108,7 +161,7 @@
 
   @include vp-1199 {
     background-image:
-    image-set(url("../img/news/first-photo/first-photo-tablet.webp") 1dppx,
+      image-set(url("../img/news/first-photo/first-photo-tablet.webp") 1dppx,
       url("../img/news/first-photo/first-photo-tablet@2x.webp") 2dppx,
       url("../img/news/first-photo/first-photo-tablet.png") 1dppx,
       url("../img/news/first-photo/first-photo-tablet@2x.png") 2dppx,
@@ -117,7 +170,7 @@
 
   @include vp-767 {
     background-image:
-    image-set(url("../img/news/first-photo/first-photo-mobile.webp") 1dppx,
+      image-set(url("../img/news/first-photo/first-photo-mobile.webp") 1dppx,
       url("../img/news/first-photo/first-photo-mobile@2x.webp") 2dppx,
       url("../img/news/first-photo/first-photo-mobile.png") 1dppx,
       url("../img/news/first-photo/first-photo-mobile@2x.png") 2dppx,
@@ -127,7 +180,7 @@
 
 .news__second-slide {
   background-image:
-  image-set(url("../img/news/second-photo/second-photo-desktop.webp") 1dppx,
+    image-set(url("../img/news/second-photo/second-photo-desktop.webp") 1dppx,
   url("../img/news/second-photo/second-photo-desktop@2x.webp") 2dppx,
   url("../img/news/second-photo/second-photo-desktop.png") 1dppx,
   url("../img/news/second-photo/second-photo-desktop@2x.png") 2dppx,
@@ -138,7 +191,7 @@
 
   @include vp-1199 {
     background-image:
-    image-set(url("../img/news/second-photo/second-photo-tablet.webp") 1dppx,
+      image-set(url("../img/news/second-photo/second-photo-tablet.webp") 1dppx,
     url("../img/news/second-photo/second-photo-tablet@2x.webp") 2dppx,
     url("../img/news/second-photo/second-photo-tablet.png") 1dppx,
     url("../img/news/second-photo/second-photo-tablet@2x.png") 2dppx,
@@ -147,7 +200,7 @@
 
   @include vp-767 {
     background-image:
-    image-set(url("../img/news/second-photo/second-photo-mobile.webp") 1dppx,
+      image-set(url("../img/news/second-photo/second-photo-mobile.webp") 1dppx,
     url("../img/news/second-photo/second-photo-mobile@2x.webp") 2dppx,
     url("../img/news/second-photo/second-photo-mobile.png") 1dppx,
     url("../img/news/second-photo/second-photo-mobile@2x.png") 2dppx,
@@ -157,7 +210,7 @@
 
 .news__third-slide {
   background-image:
-  image-set(url("../img/news/third-photo/third-photo-desktop.webp") 1dppx,
+    image-set(url("../img/news/third-photo/third-photo-desktop.webp") 1dppx,
   url("../img/news/third-photo/third-photo-desktop@2x.webp") 2dppx,
   url("../img/news/third-photo/third-photo-desktop.png") 1dppx,
   url("../img/news/third-photo/third-photo-desktop@2x.png") 2dppx,
@@ -168,7 +221,7 @@
 
   @include vp-1199 {
     background-image:
-    image-set(url("../img/news/third-photo/third-photo-tablet.webp") 1dppx,
+      image-set(url("../img/news/third-photo/third-photo-tablet.webp") 1dppx,
     url("../img/news/third-photo/third-photo-tablet@2x.webp") 2dppx,
     url("../img/news/third-photo/third-photo-tablet.png") 1dppx,
     url("../img/news/third-photo/third-photo-tablet@2x.png") 2dppx,
@@ -177,7 +230,7 @@
 
   @include vp-767 {
     background-image:
-    image-set(url("../img/news/third-photo/third-photo-mobile.webp") 1dppx,
+      image-set(url("../img/news/third-photo/third-photo-mobile.webp") 1dppx,
     url("../img/news/third-photo/third-photo-mobile@2x.webp") 2dppx,
     url("../img/news/third-photo/third-photo-mobile.png") 1dppx,
     url("../img/news/third-photo/third-photo-mobile@2x.png") 2dppx,
@@ -187,7 +240,7 @@
 
 .news__fourth-slide {
   background-image:
-  image-set(url("../img/news/fourth-photo/fourth-photo-desktop.webp") 1dppx,
+    image-set(url("../img/news/fourth-photo/fourth-photo-desktop.webp") 1dppx,
   url("../img/news/fourth-photo/fourth-photo-desktop@2x.webp") 2dppx,
   url("../img/news/fourth-photo/fourth-photo-desktop.png") 1dppx,
   url("../img/news/fourth-photo/fourth-photo-desktop@2x.png") 2dppx,
@@ -198,7 +251,7 @@
 
   @include vp-1199 {
     background-image:
-    image-set(url("../img/news/fourth-photo/fourth-photo-tablet.webp") 1dppx,
+      image-set(url("../img/news/fourth-photo/fourth-photo-tablet.webp") 1dppx,
     url("../img/news/fourth-photo/fourth-photo-tablet@2x.webp") 2dppx,
     url("../img/news/fourth-photo/fourth-photo-tablet.png") 1dppx,
     url("../img/news/fourth-photo/fourth-photo-tablet@2x.png") 2dppx,
@@ -207,7 +260,7 @@
 
   @include vp-767 {
     background-image:
-    image-set(url("../img/news/fourth-photo/fourth-photo-mobile.webp") 1dppx,
+      image-set(url("../img/news/fourth-photo/fourth-photo-mobile.webp") 1dppx,
     url("../img/news/fourth-photo/fourth-photo-mobile@2x.webp") 2dppx,
     url("../img/news/fourth-photo/fourth-photo-mobile.png") 1dppx,
     url("../img/news/fourth-photo/fourth-photo-mobile@2x.png") 2dppx,
@@ -224,10 +277,12 @@
 
   @include vp-1199 {
     min-height: 350px;
+    margin-right: 84px;
   }
 
   @include vp-767 {
     min-height: 240px;
+    margin-right: 28px;
   }
 }
 
@@ -235,7 +290,12 @@
   margin-right: 215px;
 
   @include vp-1199 {
-    margin-right: 46px;
+    margin-right: 84px;
+  }
+
+  @include vp-767 {
+    min-height: 330px;
+    margin-right: 27px;
   }
 }
 
@@ -243,9 +303,15 @@
   position: relative;
   padding: 12px 12px 6px 0;
   background-color: $color-secondary-beige;
-  border-radius: 0px 12px 0px 0px;
+  border-radius: 0 12px 0 0;
   width: fit-content;
   margin-bottom: -1px;
+  margin-right: 50%;
+
+  @include vp-1199 {
+    padding: 10px 14px 6px 0;
+    margin-right: 38%;
+  }
 }
 
 .news__date-container span {
@@ -276,13 +342,32 @@
   position: relative;
   padding: 5px 10px 0 0;
   background-color: $color-secondary-beige;
-  border-radius: 0px 12px 0px 0px;
+  border-radius: 0 12px 0 0;
   margin-right: 26px;
+
+  @include vp-1199 {
+    margin-right: 33px;
+  }
+
+  @include vp-767 {
+    margin-right: 62px;
+    padding: 11px 10px 4px 0;
+  }
 }
 
 .news .swiper-slide:first-child .news__title-container {
   margin-right: 98px;
   padding: 15px 18px 0 0;
+
+  @include vp-1199 {
+    margin-right: 33px;
+    padding: 7px 18px 0 0;
+  }
+
+  @include vp-767 {
+    margin-right: 63px;
+    padding: 11px 18px 4px 0;
+  }
 }
 
 .news__title-container p {
@@ -292,6 +377,7 @@
   line-height: 26px;
   color: $color-secondary;
   margin: 0;
+  word-break: break-word;
 
   @include vp-1199 {
     font-size: 20px;
@@ -312,15 +398,16 @@
   column-gap: 16px;
   margin-top: -1px;
   padding: 9px 18px 12px 0;
-  border-radius: 0px 12px;
+  border-radius: 0 12px;
   background-color: $color-secondary-beige;
 
-  @include  vp-1199 {
-    padding: 9px 18px;
+  @include vp-1199 {
+    padding: 9px 18px 9px 0;
+    column-gap: 24px;
   }
 
   @include vp-767 {
-    min-height: 69px;
+    padding: 13px 11px 9px 0;
   }
 }
 
@@ -363,10 +450,20 @@
   width: fit-content;
   margin: 42px auto 0 auto;
   padding: 0 20%;
+
+  @include vp-1199 {
+    margin-top: 32px;
+  }
+
+  @include vp-767 {
+    padding: 0 15%;
+    margin-top: 25px;
+  }
 }
 
 .news__swiper-pagination {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .news .swiper-pagination-bullet {
@@ -381,8 +478,27 @@
   line-height: 20px;
   color: $color-secondary;
   opacity: 0.5;
-  border-radius: 0;
-  border: none;
+  border-radius: 50%;
+  border: 1px solid transparent;
+
+  &:hover,
+  &:focus-visible {
+    outline: none;
+    border: 1px solid $color-secondary;
+    opacity: 1;
+  }
+
+  &:active {
+    background-color: $color-active;
+    color: $color-default-white;
+  }
+
+  @include vp-767 {
+    font-size: 14px;
+    line-height: 14px;
+    width: 26px;
+    height: 26px;
+  }
 }
 
 .news .swiper-pagination-bullet-active {
@@ -394,12 +510,23 @@
   font-weight: 400;
   line-height: 20px;
   opacity: 1;
+
+  @include vp-767 {
+    font-size: 14px;
+    line-height: 14px;
+    width: 26px;
+    height: 26px;
+  }
 }
 
 .news .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
 .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet:not(:last-child) {
   margin: 0;
   margin-right: 20px;
+
+  @include vp-767 {
+    margin-right: 16px;
+  }
 }
 
 .news .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
@@ -414,8 +541,16 @@
   right: 100px;
   left: 100px;
   bottom: 124px;
-}
 
-.news .swiper-grid-column>.swiper-wrapper {
-  flex-direction: row;
+  @include vp-1199 {
+    right: 45px;
+    left: 45px;
+    bottom: 105px;
+  }
+
+  @include vp-767 {
+    right: 15px;
+    left: 15px;
+    bottom: 69px;
+  }
 }

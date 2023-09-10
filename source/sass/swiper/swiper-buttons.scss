@@ -1,13 +1,32 @@
-.swiper-buttons__back {
+.swiper-button {
   background-color: transparent;
   border: none;
   width: 22px;
   height: 22px;
-}
+  border-radius: 50%;
+  cursor: pointer;
 
-.swiper-buttons__next {
-  background-color: transparent;
-  border: none;
-  width: 22px;
-  height: 22px;
+  svg {
+    stroke: $color-secondary;
+  }
+
+  &:hover,
+  &:focus-visible {
+    outline: none;
+    background-color: $color-default-white;
+  }
+
+  &:active {
+    svg {
+      opacity: 0.7;
+    }
+  }
+
+  &:disabled {
+    pointer-events: none;
+
+    svg {
+      stroke: #a9afb7;
+    }
+  }
 }
