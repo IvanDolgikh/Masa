@@ -2147,10 +2147,10 @@ button,
       -ms-flex-align: center;
           align-items: center;
   padding: 4px 4px 4px 28px;
-  -webkit-column-gap: 30px;
-     -moz-column-gap: 30px;
-          column-gap: 30px;
-  background-color: #ffffff;
+  -webkit-column-gap: 20px;
+     -moz-column-gap: 20px;
+          column-gap: 20px;
+  background-color: transparent;
   border: 1px solid #316dc2;
   border-radius: 30px;
   height: -webkit-fit-content;
@@ -2246,17 +2246,17 @@ button,
   opacity: 0.7;
 }
 
-.btn-disabled {
+.btn--disabled {
   border: 1px solid #a9afb7;
   pointer-events: none;
 }
-.btn-disabled span {
+.btn--disabled span {
   color: #a9afb7;
 }
-.btn-disabled span:last-child {
+.btn--disabled span:last-child {
   background-color: #a9afb7;
 }
-.btn-disabled svg {
+.btn--disabled svg {
   stroke: #ffffff;
 }
 
@@ -3161,7 +3161,8 @@ button,
   background-image: linear-gradient(to top, rgba(49, 109, 194, 0.2)), -webkit-image-set(url("../img/hero/first-photo/first-photo-desktop.webp") 1dppx, url("../img/hero/first-photo/first-photo-desktop@2x.webp") 2dppx, url("../img/hero/first-photo/first-photo-desktop.png") 1dppx, url("../img/hero/first-photo/first-photo-desktop@2x.png") 2dppx);
   background-image: linear-gradient(to top, rgba(49, 109, 194, 0.2)), image-set(url("../img/hero/first-photo/first-photo-desktop.webp") 1dppx, url("../img/hero/first-photo/first-photo-desktop@2x.webp") 2dppx, url("../img/hero/first-photo/first-photo-desktop.png") 1dppx, url("../img/hero/first-photo/first-photo-desktop@2x.png") 2dppx);
   background-repeat: no-repeat;
-  background-size: 100% 100%;
+  background-size: cover;
+  background-position: center;
   background-color: #668bb2;
 }
 @media (max-width: 1199px) {
@@ -3184,7 +3185,8 @@ button,
   background-image: linear-gradient(to top, rgba(49, 109, 194, 0.2)), -webkit-image-set(url("../img/hero/second-photo/second-photo-desktop.webp") 1dppx, url("../img/hero/second-photo/second-photo-desktop@2x.webp") 2dppx, url("../img/hero/second-photo/second-photo-desktop.png") 1dppx, url("../img/hero/second-photo/second-photo-desktop@2x.png") 2dppx);
   background-image: linear-gradient(to top, rgba(49, 109, 194, 0.2)), image-set(url("../img/hero/second-photo/second-photo-desktop.webp") 1dppx, url("../img/hero/second-photo/second-photo-desktop@2x.webp") 2dppx, url("../img/hero/second-photo/second-photo-desktop.png") 1dppx, url("../img/hero/second-photo/second-photo-desktop@2x.png") 2dppx);
   background-repeat: no-repeat;
-  background-size: 100% 100%;
+  background-size: cover;
+  background-position: center;
   background-color: #4d7da4;
 }
 @media (max-width: 1199px) {
@@ -3207,7 +3209,8 @@ button,
   background-image: linear-gradient(to top, rgba(49, 109, 194, 0.2)), -webkit-image-set(url("../img/hero/third-photo/third-photo-desktop.webp") 1dppx, url("../img/hero/third-photo/third-photo-desktop@2x.webp") 2dppx, url("../img/hero/third-photo/third-photo-desktop.png") 1dppx, url("../img/hero/third-photo/third-photo-desktop@2x.png") 2dppx);
   background-image: linear-gradient(to top, rgba(49, 109, 194, 0.2)), image-set(url("../img/hero/third-photo/third-photo-desktop.webp") 1dppx, url("../img/hero/third-photo/third-photo-desktop@2x.webp") 2dppx, url("../img/hero/third-photo/third-photo-desktop.png") 1dppx, url("../img/hero/third-photo/third-photo-desktop@2x.png") 2dppx);
   background-repeat: no-repeat;
-  background-size: 100% 100%;
+  background-size: cover;
+  background-position: center;
   background-color: #9eb0bc;
 }
 @media (max-width: 1199px) {
@@ -4198,8 +4201,8 @@ button,
 }
 @media (max-width: 1199px) {
   .training__grant-item p {
-    line-height: 20px;
     font-size: 16px;
+    line-height: 20px;
     margin: 0;
   }
 }
@@ -6234,7 +6237,7 @@ button,
   opacity: 0.7;
 }
 
-.description-link-disabled {
+.description-link--disabled {
   background-color: #a9afb7;
   pointer-events: none;
 }

@@ -3,8 +3,8 @@
   justify-content: space-between;
   align-items: center;
   padding: 4px 4px 4px 28px;
-  column-gap: 30px;
-  background-color: $color-default-white;
+  column-gap: 20px;
+  background-color: transparent;
   border: 1px solid $color-secondary;
   border-radius: 30px;
   height: fit-content;
@@ -93,7 +93,7 @@
   }
 }
 
-.btn-disabled {
+.btn--disabled {
   border: 1px solid #a9afb7;
   pointer-events: none;
 

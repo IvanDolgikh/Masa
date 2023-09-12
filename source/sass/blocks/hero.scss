@@ -35,7 +35,8 @@
       url("../img/hero/first-photo/first-photo-desktop@2x.png") 2dppx,
     );
   background-repeat: no-repeat;
-  background-size: 100% 100%;
+  background-size: cover;
+  background-position: center;
   background-color: #668bb2;
 
   @include vp-1199 {
@@ -68,7 +69,8 @@
     url("../img/hero/second-photo/second-photo-desktop@2x.png") 2dppx,
     );
   background-repeat: no-repeat;
-  background-size: 100% 100%;
+  background-size: cover;
+  background-position: center;
   background-color: #4d7da4;
 
   @include vp-1199 {
@@ -101,7 +103,8 @@
     url("../img/hero/third-photo/third-photo-desktop@2x.png") 2dppx,
     );
   background-repeat: no-repeat;
-  background-size: 100% 100%;
+  background-size: cover;
+  background-position: center;
   background-color: #9eb0bc;
 
   @include vp-1199 {
