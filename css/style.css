@@ -2057,7 +2057,6 @@ body {
 html {
   font-style: normal;
   font-family: "Manrope", "Arial", sans-serif;
-  font-display: optional;
   color: #484848;
   scroll-behavior: smooth;
   height: 100%;
