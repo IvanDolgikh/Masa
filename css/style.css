@@ -2014,7 +2014,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
   src: url("../fonts/rouble/rouble.woff2") format("woff2"), url("../fonts/rouble/rouble.woff") format("woff");
   font-weight: 400;
   font-style: normal;
-  font-display: swap;
+  font-display: optional;
 }
 
 @font-face {
@@ -2022,7 +2022,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
   src: url("../fonts/manrope-light/Manrope-Light.woff2") format("woff2"), url("../fonts/manrope-light/Manrope-Light.woff") format("woff");
   font-weight: 300;
   font-style: normal;
-  font-display: swap;
+  font-display: optional;
 }
 
 @font-face {
@@ -2030,7 +2030,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
   src: url("../fonts/manrope-regular/Manrope-Regular.woff2") format("woff2"), url("../fonts/manrope-regular/Manrope-Regular.woff") format("woff");
   font-weight: 400;
   font-style: normal;
-  font-display: swap;
+  font-display: optional;
 }
 
 @font-face {
@@ -2038,7 +2038,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
   src: url("../fonts/manrope-medium/Manrope-Medium.woff2") format("woff2"), url("../fonts/manrope-medium/Manrope-Medium.woff") format("woff");
   font-weight: 500;
   font-style: normal;
-  font-display: swap;
+  font-display: optional;
 }
 
 *,
@@ -2057,6 +2057,7 @@ body {
 html {
   font-style: normal;
   font-family: "Manrope", "Arial", sans-serif;
+  font-display: optional;
   color: #484848;
   scroll-behavior: smooth;
   height: 100%;
