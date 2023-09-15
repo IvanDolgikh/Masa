@@ -2,6 +2,8 @@
   position: relative;
   width: fit-content;
   margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
 
   @include vp-1199 {
     margin-bottom: 13px;
@@ -19,6 +21,8 @@
     line-height: 18px;
     color: rgba(240, 239, 233, 0.8);
     margin-bottom: 9px;
+    transition: 0.3s;
+    order: 0;
 
     @include vp-1199 {
       line-height: 20px;
@@ -42,15 +46,25 @@
     width: 350px;
     padding: 10px 20px;
     color: $color-default-white;
+    order: 1;
 
     &:hover,
     &:focus-visible {
       border: 1px solid rgba(255, 255, 255, 1);
+      color: rgba(240, 239, 233, 1);
+
+      & + label {
+        color: rgba(240, 239, 233, 1);
+      }
     }
 
     &:disabled {
       border: 1px solid rgba(255, 255, 255, 0.4);
       background: rgba(255, 255, 255, 0.2);
+
+      & + label {
+        color: rgba(240, 239, 233, 0.6);
+      }
     }
 
     @include vp-1199 {
@@ -75,12 +89,6 @@
     textarea {
       border: 1px solid $color-error;
       background: rgba(255, 94, 102, 0.2);
-    }
-  }
-
-  &.is-valid {
-    input {
-      border: 1px solid #22b259;
     }
   }
 }

@@ -8,6 +8,7 @@ import './sliders';
 import './map';
 import {initAccordions} from './accordion/init-accordion';
 import './accordion/accordion-states';
+import './news-filter';
 
 // ---------------------------------
 

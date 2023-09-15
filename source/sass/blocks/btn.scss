@@ -3,18 +3,14 @@
   justify-content: space-between;
   align-items: center;
   padding: 4px 4px 4px 28px;
-  column-gap: 20px;
+  column-gap: 12px;
   background-color: transparent;
   border: 1px solid $color-secondary;
   border-radius: 30px;
   height: fit-content;
   transition: 0.3s;
   cursor: pointer;
-
-  @include vp-767 {
-    padding-left: 18px;
-    column-gap: 20px;
-  }
+  user-select: none;
 
   svg {
     stroke: $color-default-white;

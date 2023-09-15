@@ -21,6 +21,14 @@
 }
 
 .main-footer__logo-container {
+  display: block;
+  cursor: pointer;
+  border-radius: 50%;
+
+  &:focus-visible {
+    outline: 2px solid $color-secondary;
+  }
+
   @include vp-767 {
     margin: 0 auto;
   }

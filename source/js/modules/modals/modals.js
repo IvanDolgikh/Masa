@@ -165,6 +165,7 @@ export class Modals {
     }
 
     setTimeout(() => {
+      document.getElementById('user-name-modal').focus();
       this._addListeners(modal);
       this._autoPlay(modal);
       document.addEventListener('click', this._documentClickHandler);

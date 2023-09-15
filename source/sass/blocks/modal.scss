@@ -197,11 +197,20 @@
     &:hover,
     &:focus-visible {
       border: 1px solid rgba(72, 72, 72, 1);
+      color: rgba(72, 72, 72, 1);
+
+      & + label {
+        color: rgba(72, 72, 72, 1);
+      }
     }
 
     &:disabled {
       border: 1px solid rgba(169, 175, 183, 0.5);
       background: rgba(169, 175, 183, 0.2);
+
+      & + label {
+        color: rgba(72, 72, 72, 0.6);
+      }
     }
 
     @include vp-767 {
@@ -232,6 +241,10 @@
     &:focus,
     &:active {
       border: 1px solid rgba(72, 72, 72, 1);
+
+      & ~ label {
+        color: rgba(72, 72, 72, 1);
+      }
     }
 
     &:disabled {

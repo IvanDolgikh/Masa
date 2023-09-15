@@ -107,6 +107,7 @@
   width: 100%;
   height: fit-content;
   cursor: pointer;
+  user-select: none;
 
   &:hover,
   &:focus-visible {
@@ -186,7 +187,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 46px;
+  min-width: 46px;
   height: 46px;
   background-color: $color-default-white;
   border-radius: 50%;
