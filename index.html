@@ -23,25 +23,25 @@
 
     <div class="main-header__container">
 
-      <div class="main-header__logo-container">
+      <a class="main-header__logo-container" href="#">
         <img class="main-header__logo" src="./img/svg/logo.svg" width="52" height="52" alt="Логотип Masa.">
-      </div>
+      </a>
 
       <div class="main-header__nav-container">
 
-        <nav class="main-header__nav">
-
+        <button class="main-header__nav-button">
           <span>Меню</span>
 
-          <button class="main-header__button-open-menu">
+          <span class="main-header__button-icons-container">
             <svg class="main-header__button-open-menu-icon" width="20" height="20">
               <use href="./img/sprite.svg#icon-open-menu"></use>
             </svg>
             <svg class="main-header__button-close-menu-icon" width="20" height="20">
               <use href="./img/sprite.svg#icon-close-menu"></use>
             </svg>
-          </button>
-        </nav>
+          </span>
+        </button>
+
         <div class="main-header__nav-list-container">
           <ul class="main-header__nav-list reset-list">
             <li class="main-header__nav-item">
@@ -339,7 +339,7 @@
                   </svg>
                 </div>
                 <div class="programs__description">
-                  <p>Помогайте другим и развивайте свои лидерские качества.</p>
+                  <p>Помогайте другим и&nbsp;развивайте свои лидерские качества.</p>
                   <a class="programs__description-link description-link" href="#">
                     <svg class="programs__link-icon" width="10" height="10">
                       <use href="./img/sprite.svg#icon-show-more"></use>
@@ -465,19 +465,19 @@
         <div class="news__list-container">
           <ul class="news__list reset-list">
             <li class="news__item news__item--active">
-              <a href="#">Общее</a>
+              <a href="#" data-general>Общее</a>
             </li>
             <li class="news__item">
-              <a href="#">Волонтёрство</a>
+              <a href="#" data-volunteering>Волонтёрство</a>
             </li>
             <li class="news__item">
-              <a href="#">Стажировки</a>
+              <a href="#" data-internship>Стажировки</a>
             </li>
             <li class="news__item">
-              <a href="#">Карьера</a>
+              <a href="#" data-career>Карьера</a>
             </li>
             <li class="news__item">
-              <a href="#">Путешествия</a>
+              <a href="#" data-journey>Путешествия</a>
             </li>
           </ul>
         </div>
@@ -486,7 +486,7 @@
           <div class="swiper swiper-3">
             <div class="swiper-wrapper">
 
-              <div class="swiper-slide news__first-slide">
+              <div class="swiper-slide news__first-slide" data-internship>
                 <div class="news__content-container">
                   <div class="news__date-container">
                     <svg class="news__auxiliary-icon" width="16" height="16">
@@ -518,7 +518,7 @@
                 </div>
               </div>
 
-              <div class="swiper-slide news__second-slide">
+              <div class="swiper-slide news__second-slide" data-journey>
                 <div class="news__content-container">
                   <div class="news__date-container">
                     <svg class="news__auxiliary-icon" width="16" height="16">
@@ -549,7 +549,7 @@
                 </div>
               </div>
 
-              <div class="swiper-slide news__third-slide">
+              <div class="swiper-slide news__third-slide" data-volunteering>
                 <div class="news__content-container">
                   <div class="news__date-container">
                     <svg class="news__auxiliary-icon" width="16" height="16">
@@ -580,7 +580,7 @@
                 </div>
               </div>
 
-              <div class="swiper-slide news__fourth-slide">
+              <div class="swiper-slide news__fourth-slide" data-career>
                 <div class="news__content-container">
                   <div class="news__date-container">
                     <svg class="news__auxiliary-icon" width="16" height="16">
@@ -611,7 +611,7 @@
                 </div>
               </div>
 
-              <div class="swiper-slide news__fourth-slide">
+              <div class="swiper-slide news__fourth-slide" data-career>
                 <div class="news__content-container">
                   <div class="news__date-container">
                     <svg class="news__auxiliary-icon" width="16" height="16">
@@ -669,7 +669,7 @@
     <section class="questions">
       <div class="questions__container">
         <h2>Вопросы и&nbsp;ответы</h2>
-        <div class="accordion" data-accordion="parent" data-single="data-single">
+        <div class="accordion" data-accordion="parent">
           <div class="accordion__element" data-accordion="element">
             <button class="accordion__button-container" type="button" data-accordion="button"
               aria-label="Просмотреть ответ на вопрос.">
@@ -981,24 +981,23 @@
 
               <div class="consultation__user-name custom-input" data-validate-type="text" data-limitation="name"
                 data-required="data-required">
-                <label for="user-name">Имя</label>
                 <input type="text" name="user-name" id="user-name" aria-label="Ввести имя.">
+                <label for="user-name">Имя</label>
               </div>
 
               <div class="consultation__user-phone-number custom-input" data-validate-type="phone"
                 data-on-input-validate="data-on-input-validate" data-required="data-required">
-                <label for="user-phone-number">Телефон</label>
                 <input type="tel" name="user-phone-number" id="user-phone-number" aria-label="Ввести номер телефона.">
+                <label for="user-phone-number">Телефон</label>
               </div>
 
-              <div class="consultation__message custom-input" data-validate-type="text">
-                <label for="user-message">Ваше сообщение</label>
+              <div class="consultation__message custom-input" data-validate-type="text" data-required="data-required">
                 <textarea name="user-info" id="user-message"></textarea>
+                <label for="user-message">Ваше сообщение</label>
               </div>
 
               <div class="consultation__select custom-select" data-select="data-select" data-validate-type="select"
-                data-name="some-name" data-id="id-example-2" data-message-base="Поле обязательно к заполнению">
-                <label class="custom-select__label" for="select-button">Выберите город</label>
+                data-name="some-name" data-id="id-example-2" data-required="data-required">
                 <button class="custom-select__button" id="select-button" type="button"
                   aria-label="Выберите одну из опций">
                   <span class="custom-select__text"></span>
@@ -1016,6 +1015,7 @@
                   <li class="custom-select__item" tabindex="0" data-select-value="id-3" aria-selected="false"
                     role="option">Тюмень</li>
                 </ul>
+                <label class="custom-select__label" for="select-button">Выберите город</label>
               </div>
 
 
@@ -1050,9 +1050,9 @@
 
   <footer class="main-footer">
     <div class="main-footer__container">
-      <div class="main-footer__logo-container">
+      <a class="main-footer__logo-container">
         <img class="main-footer__logo" src="./img/svg/logo.svg" width="52" height="52" alt="Логотип Masa.">
-      </div>
+      </a>
 
       <nav class="main-footer__nav">
         <ul class="main-footer__nav-list reset-list">
@@ -1124,21 +1124,20 @@
           <form class="modal__form" action="https://echo.htmlacademy.ru" method="post">
 
             <div class="modal__user-name custom-input" data-validate-type="text" data-limitation="name"
-              data-required="data-required">
-              <label for="user-name-modal">Имя</label>
+              data-required="data-required" autofocus>
               <input type="text" name="user-name" id="user-name-modal" aria-label="Ввести имя.">
+              <label for="user-name-modal">Имя</label>
             </div>
 
             <div class="modal__user-phone-number custom-input" data-validate-type="phone"
               data-on-input-validate="data-on-input-validate" data-required="data-required">
-              <label for="user-phone-number-modal">Телефон</label>
               <input type="tel" name="user-phone-number" id="user-phone-number-modal"
                 aria-label="Ввести номер телефона.">
+                <label for="user-phone-number-modal">Телефон</label>
             </div>
 
             <div class="modal__select custom-select" data-select="data-select" data-validate-type="select"
-              data-name="some-name" data-id="id-example-2" data-message-base="Поле обязательно к заполнению">
-              <label class="custom-select__label" for="select-button-modal">Выберите город</label>
+              data-name="some-name" data-id="id-example-2" data-required="data-required">
               <button class="custom-select__button" id="select-button-modal" type="button"
                 aria-label="Выберите одну из опций">
                 <span class="custom-select__text"></span>
@@ -1156,6 +1155,7 @@
                 <li class="custom-select__item" tabindex="0" data-select-value="id-3" aria-selected="false"
                   role="option">Тюмень</li>
               </ul>
+              <label class="custom-select__label" for="select-button-modal">Выберите город</label>
             </div>
 
 
