@@ -37,14 +37,14 @@
 }
 
 .consultation__form-container {
-  padding: 82px 74px 48px 74px;
+  padding: 82px 74px 52px 74px;
   width: fit-content;
   background-color: $color-secondary;
   border-radius: 16px;
   max-width: 498px;
 
   @include vp-1199 {
-    padding: 60px 46px 57px 46px;
+    padding: 60px 46px 59px 46px;
     max-width: 442px;
   }
 
@@ -194,7 +194,7 @@
   margin: 0;
 
   @include vp-767 {
-    width: 34px;
+    min-width: 34px;
     height: 34px;
   }
 }

@@ -52,7 +52,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  column-gap: 20px;
+  column-gap: 10px;
   padding: 4px 4px 4px 20px;
   margin-left: auto;
   background-color: $color-default-white;
@@ -136,7 +136,7 @@
   display: none;
 }
 
-.main-header__nav-button p {
+.main-header__nav-button span {
   word-break: break-all;
   font-size: 14px;
   font-weight: 500;
@@ -263,7 +263,7 @@
   }
 }
 
-.main-header__nav--active p {
+.main-header__nav--active span {
   color: $color-default-white;
 }
 

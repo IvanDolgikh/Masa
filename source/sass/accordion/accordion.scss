@@ -10,7 +10,7 @@
   }
 
   &__element:last-child {
-    margin-bottom: 120px;
+    margin-bottom: 124px;
 
     @include vp-1199 {
       margin-bottom: 100px;
@@ -129,7 +129,7 @@
   font-family: $ff-manrope;
   font-size: 28px;
   font-weight: 400;
-  line-height: 29px;
+  line-height: 28px;
   margin-right: 32%;
   pointer-events: none;
 
