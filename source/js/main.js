@@ -27,12 +27,10 @@ window.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('load', () => {
     initModals();
     const form = new Form();
+    const select = new CustomSelect();
     window.form = form;
+    select.init();
     form.init();
+    initAccordions();
   });
-
-  const select = new CustomSelect();
-
-  initAccordions();
-  select.init();
 });
