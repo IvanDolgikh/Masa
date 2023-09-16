@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Описание проекта">
-  <title>ProjectName</title>
+  <title>Masa</title>
   <link rel="icon" type="image/png" sizes="32x32" href="img/favicons/favicon-32.png">
   <link rel="icon" href="img/favicons/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="img/favicons/favicon-apple.png">
@@ -14,7 +14,8 @@
   <link rel="preload" href="fonts/manrope-light/Manrope-Light.woff2" as="font">
   <link rel="preload" href="fonts/manrope-medium/Manrope-Medium.woff2" as="font">
   <link rel="preload" href="fonts/manrope-regular/Manrope-Regular.woff2" as="font">
-  <link rel="stylesheet" href="css/style.min.css">
+  <link rel="preload" href="css/style.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="css/style.min.css"></noscript>
 </head>
 
 <body>
@@ -321,7 +322,7 @@
                 </div>
                 <div class="programs__description">
                   <p>Получите незаменимый опыт работы в&nbsp;крупнейших израильских компаниях.</p>
-                  <a class="programs__description-link description-link" href="#">
+                  <a class="programs__description-link description-link" href="#" aria-label="Узнать подробнее о стажировках.">
                     <svg class="programs__link-icon" width="10" height="10">
                       <use href="./img/sprite.svg#icon-show-more"></use>
                     </svg>
@@ -340,7 +341,7 @@
                 </div>
                 <div class="programs__description">
                   <p>Помогайте другим и&nbsp;развивайте свои лидерские качества.</p>
-                  <a class="programs__description-link description-link" href="#">
+                  <a class="programs__description-link description-link" href="#" aria-label="Узнать подробнее о волонтёрстве.">
                     <svg class="programs__link-icon" width="10" height="10">
                       <use href="./img/sprite.svg#icon-show-more"></use>
                     </svg>
@@ -360,7 +361,7 @@
                 </div>
                 <div class="programs__description">
                   <p>Получите образование и&nbsp;измените свое будущее.</p>
-                  <a class="programs__description-link description-link" href="#">
+                  <a class="programs__description-link description-link" href="#" aria-label="Узнать подробнее об учебе.">
                     <svg class="programs__link-icon" width="10" height="10">
                       <use href="./img/sprite.svg#icon-show-more"></use>
                     </svg>
@@ -379,7 +380,7 @@
                 </div>
                 <div class="programs__description">
                   <p>Получите образование и&nbsp;измените свое будущее.</p>
-                  <a class="programs__description-link description-link" href="#">
+                  <a class="programs__description-link description-link" href="#" aria-label="Узнать подробнее об учебе.">
                     <svg class="programs__link-icon" width="10" height="10">
                       <use href="./img/sprite.svg#icon-show-more"></use>
                     </svg>
@@ -506,7 +507,7 @@
                   <div class="news__description">
                     <p>Саша рассказывает, как попала в&nbsp;программу и&nbsp;как прошла 6-месячная стажировка
                       в&nbsp;ISOFound</p>
-                    <a class="news__description-link description-link" href="#">
+                    <a class="news__description-link description-link" href="#" aria-label="Просмотреть новость.">
                       <svg class="news__link-icon" width="10" height="10">
                         <use href="./img/sprite.svg#icon-show-more"></use>
                       </svg>
@@ -537,7 +538,7 @@
                   </div>
                   <div class="news__description">
                     <p>Какие места посещают наши студенты весной</p>
-                    <a class="news__description-link description-link" href="#">
+                    <a class="news__description-link description-link" href="#" aria-label="Просмотреть новость.">
                       <svg class="news__link-icon" width="10" height="10">
                         <use href="./img/sprite.svg#icon-show-more"></use>
                       </svg>
@@ -568,7 +569,7 @@
                   </div>
                   <div class="news__description">
                     <p>Программа помощи детям длительностью 4&nbsp;месяца</p>
-                    <a class="news__description-link description-link" href="#">
+                    <a class="news__description-link description-link" href="#" aria-label="Просмотреть новость.">
                       <svg class="news__link-icon" width="10" height="10">
                         <use href="./img/sprite.svg#icon-show-more"></use>
                       </svg>
@@ -599,7 +600,7 @@
                   </div>
                   <div class="news__description">
                     <p>Ведущие компании готовы трудоустроить выпускников стажировки</p>
-                    <a class="news__description-link description-link" href="#">
+                    <a class="news__description-link description-link" href="#" aria-label="Просмотреть новость.">
                       <svg class="news__link-icon" width="10" height="10">
                         <use href="./img/sprite.svg#icon-show-more"></use>
                       </svg>
@@ -630,7 +631,7 @@
                   </div>
                   <div class="news__description">
                     <p>Ведущие компании готовы трудоустроить выпускников стажировки</p>
-                    <a class="news__description-link description-link" href="#">
+                    <a class="news__description-link description-link" href="#" aria-label="Просмотреть новость.">
                       <svg class="news__link-icon" width="10" height="10">
                         <use href="./img/sprite.svg#icon-show-more"></use>
                       </svg>
@@ -1079,21 +1080,21 @@
 
       <ul class="main-footer__social-list reset-list">
         <li class="main-footer__social-item">
-          <a class="main-footer__social-link" href="#">
+          <a class="main-footer__social-link" href="#" aria-label="Перейти на страницу вконтакте.">
             <svg class="main-footer__social-icon" width="16" height="16">
               <use href="./img/sprite.svg#icon-vk"></use>
             </svg>
           </a>
         </li>
         <li class="main-footer__social-item">
-          <a class="main-footer__social-link" href="#">
+          <a class="main-footer__social-link" href="#" aria-label="Перейти на страницу одноклассники.">
             <svg class="main-footer__social-icon" width="16" height="16">
               <use href="./img/sprite.svg#icon-od"></use>
             </svg>
           </a>
         </li>
         <li class="main-footer__social-item">
-          <a class="main-footer__social-link" href="#">
+          <a class="main-footer__social-link" href="#" aria-label="Перейти на страницу реддит.">
             <svg class="main-footer__social-icon" width="16" height="16">
               <use href="./img/sprite.svg#icon-reddit"></use>
             </svg>
