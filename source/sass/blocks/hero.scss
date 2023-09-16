@@ -6,6 +6,18 @@
   display: block;
 }
 
+.hero__container {
+  min-height: 800px;
+
+  @include vp-1199 {
+    min-height: 1024px;
+  }
+
+  @include vp-767 {
+    min-height: 568px;
+  }
+}
+
 .hero__content {
   display: flex;
   flex-direction: column;
