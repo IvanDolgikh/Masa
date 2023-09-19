@@ -2869,7 +2869,7 @@ button,
 
 .main-header__container {
   position: absolute;
-  top: 20px;
+  top: 30px;
   right: 0;
   left: 0;
   display: -webkit-box;
@@ -5302,7 +5302,6 @@ button,
   }
 
   .main-header__container {
-    top: 30px;
     padding: 0 45px;
   }
 

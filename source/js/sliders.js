@@ -2,6 +2,7 @@ export const swiperHero = new Swiper('.swiper-1', {
   direction: 'horizontal',
   loop: true,
   slidesPerView: 1,
+  allowTouchMove: false,
 
   autoplay: {
     delay: 3000,
@@ -10,6 +11,18 @@ export const swiperHero = new Swiper('.swiper-1', {
   pagination: {
     el: '.swiper-pagination',
     clickable: true,
+  },
+
+  breakpoints: {
+    320: {
+      allowTouchMove: true,
+    },
+    768: {
+      allowTouchMove: true,
+    },
+    1200: {
+      allowTouchMove: false,
+    },
   },
 });
 
